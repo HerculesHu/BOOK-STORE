@@ -1,7 +1,34 @@
 /**
  * Created by Administrator on 18-1-8.
  */
-window.onload = function () {
+
+
+
+
+//一开始进入网页
+window.onload=function () {
+    setup();
+    var iTimerid = window.setInterval("showtime()", 10);//设置循环周期
+    var iTimerid2 = window.setInterval("weeks()", 10);
+
+
+}
+
+var a=0;
+
+    function setup() {
+        if (a==0){
+            var str="欢迎光临"
+        }
+        else{
+            var str="系统异常"
+
+        }
+        window.alert(str);
+    }
+
+
+function  weeks() {
     var oDt = new Date();
     var sWd = "";
     var iWeekDay = oDt.getDay();
@@ -32,6 +59,8 @@ window.onload = function () {
     document.getElementById("displaydate").innerHTML = "<span>" + oDt.getFullYear() + "年" + iMonth + "月" + oDt.getDate() + "日 " + sWd + "</span>";
     var iTimerid = window.setInterval("showtime()", 1000);
 }
+
+
 function showtime() {
     var oDt = new Date();
     var iTimerid;
@@ -56,4 +85,3 @@ function showtime() {
     }
     document.getElementById("displaytime").innerHTML = "<span>" + sTime + "</span>";
 }
-
