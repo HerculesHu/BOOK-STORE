@@ -270,3 +270,5 @@ nav ul a:hover{background-color: #834524;}
 #nav nav ul ul{visibility: hidden;position: absolute;left:-1px;background-image:url("images/navbg.jpg");}
 #nav nav ul li:hover ul{visibility: visible; z-index: 100;}
 
+#displaydate{position:absolute;top:20px; left:650px;color:#FFF;}
+#displaytime{position:absolute;top:20px; left:810px;color:#FFF;}
