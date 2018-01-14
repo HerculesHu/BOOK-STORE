@@ -153,14 +153,10 @@ ul.nav li:hover ul{
     justify-content: space-around;
 }
 .box-item{
-
     line-height: 200px;
     vertical-align: middle;
     margin: 5px;
     background-color: #ffd200;
-    font-size: 100px;
-    color: white;
-    text-align: center;
     flex-grow: 1;
     flex-shrink: 1;
 }
@@ -168,14 +164,38 @@ ul.nav li:hover ul{
     flex-direction: column-reverse;
     flex-wrap: wrap;
     flex-flow: row nowrap;
+    margin-top: 60px ;
 }
 .box-item3{
-    flex-grow: 5;
-    flex-shrink: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
     justify-content: center;
-
 }
 
+.main-introduce{
+    width: 540px;
+    float: left;
+    margin-left: 70px;
+    margin-top: 25px ;
+}
+
+.main-introduce img{
+    display: block;
+    float: left;
+    margin-top: 25px ;
+}
+.content{
+    float: right;
+    width: 310px;
+    margin-top: 25px ;
+    margin-right: -12px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    text-indent: 2em;
+    color: rgb( 255, 255, 255 );
+    line-height: 2.25;
+}
+/******************************************************************************************************************/
 
 
 /**************************************************************************************************/
@@ -186,7 +206,7 @@ ul.nav li:hover ul{
     display: flex;
     width: 650px; /* 1 */
     height: 266px; /* 2 */
-    margin: 50px auto 50px;
+    margin: 10px auto 10px;
     background-color: white;
 }
 /* banner为了hover的事件准备 */
@@ -325,7 +345,7 @@ ol .icon.active {
 
 
 
-@charset "utf-8";
+/****************************************************************************************************/
 body,header,img,section,footer,h1,h2,h3,h4,p,ul,ol,li,a,label,input,button,figure,div,em,strong,span,hgroup,p{margin:0;padding:0;}
 a{text-decoration:none;}
 ul,ol{list-style: outside none none;}
