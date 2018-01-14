@@ -322,3 +322,38 @@ ol .icon.active {
     line-height: 100px;
     text-align: center;
 }
+
+
+
+@charset "utf-8";
+body,header,img,section,footer,h1,h2,h3,h4,p,ul,ol,li,a,label,input,button,figure,div,em,strong,span,hgroup,p{margin:0;padding:0;}
+a{text-decoration:none;}
+ul,ol{list-style: outside none none;}
+.none{display:none;}
+img{display:block;max-width: 100%;}
+div,figure,figcaption,input,button{box-sizing:border-box;}
+.clearFix:after{content:".";display:block;height:0;visibility:hidden;clear: both;}
+
+
+#container{max-width:1263px;margin:30px auto;overflow: hidden;}
+#container .sideBar{float: right;width:26.2%;}
+#container .sideBox{border:1px solid #eee;margin:0px 0px 10px 0px;text-align:center;background:#fff;}
+#container .sideBox h3{font-size:20px;font-weight:normal;background:#fafafa;text-indent:10px;height:40px;line-height:40px;text-align:left;color:#666;}
+#container .sideBox .tag{padding:10px 0px;}
+#container .sideBox .tag li{display:inline-block;background:#eee;margin:2px 0px;width:100px;height:35px;text-align:left;text-indent: 8px;line-height:35px;}
+#container .sideBox .tag li a{display:block;color:#999;}
+#container .sideBox .tag a:hover{background:#458b00;color:#fff;}
+#container .box,#container .figure{padding:10px 0px;}
+#container .figure figure{display:inline-block;padding:4px 0;color:#666;background:#fff;}
+#container .box a{display:inline-block;height:40px;line-height:40px;width:150px;color:#999;margin:2px 0;text-indent:35px;text-align:left;}
+
+#container .list{float: left;width:72.8%;overflow:hidden;color:#666;font-size:20px;}
+#container .list h3{height:40px;line-height:40px;font-size:30px;font-weight: normal;border-bottom:1px dashed #999;padding-bottom:15px;}
+
+
+/*风景欣赏*/
+.scenery figure{display: block;padding:4px;border:1px solid #ddd;border-radius:4px;margin:15px 5px 15px 0px;float:left;width:32.6%;}
+.scenery figcaption{text-align:center;padding:5px 0px;}
+#container .list.information .more,#container .list.scenery .more{width:200px;height:50px;line-height:50px;border:1px solid #ccc;border-radius:10px;font-size: 18px;margin:0px auto;text-align: center;cursor: pointer;background:#fafafa;}
+
+
