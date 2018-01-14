@@ -21,7 +21,7 @@
     <a name="top"></a>
 
     <!--网页描述-->
-    <h1 id="logo-text"><a href="index.html" title="">网页名</a></h1>
+    <h1 id="logo-text"><a href="index.html" title="">凯撒皇宫娱乐会所</a></h1>
     <p id="slogan">这是一段关于网页的描述 </p>
 
     <!-- 顶部导航开始 -->
@@ -84,18 +84,146 @@
 <!--内容-->
 <div class="box box1">
     <div class="box-item">1</div>
-    <div class="box-item">2</div>
-    <div class="box-item box-item3">3</div>
-    <div class="box-item">4</div>
+    <div class="box-item box-item3">
+
+        <div class="main" id="main">
+            <div class="banner">
+                <div id="box">
+                    <ul id="cast" class="cast">
+                        <li class="li-left"><a><img src="images/1.jpeg" /></a></li>
+                        <li class="li-left"><a><img src="images/2.jpg" /></a></li>
+                        <li class="li-left"><a><img src="images/3.jpg" /></a></li>
+                        <li class="li-left"><a><img src="images/4.jpg" /></a></li>
+                        <li class="li-left"><a><img src="images/1.jpeg" /></a></li>
+                        <li class="li-left"><a><img src="images/2.jpg" /></a></li>
+                        <li class="li-left"><a><img src="images/3.jpg" /></a></li>
+                        <li class="li-left"><a><img src="images/4.jpg" /></a></li>
+                    </ul>
+                </div>
+                <a href="#" id="prev" class="left carousel-container-left carousel-control">
+                    <span class="arrow-left chevron-left"></span>
+                </a>
+                <a href="#" id="next" class="right carousel-container-right carousel-control">
+                    <span class="arrow-right chevron-right"></span>
+                </a>
+                <ol class="clear-fix indicator">
+                    <li class="icon active"></li>
+                    <li class="icon"></li>
+                    <li class="icon"></li>
+                    <li class="icon"></li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="box-item ">3</div>
 </div>
 <!--页脚-->
+
+
+
+
 
 </div>
 <!--版权标志-->
 <div class="footer">
-    版权标志
+    凯撒皇宫娱乐会所版权标志
 </div>
 
+
+<script>
+    (function() {
+
+        var li = document.getElementsByClassName('li-left'),
+            ul = document.getElementById('cast');
+        img = document.getElementsByTagName('img'),
+            prev = document.getElementById('prev')
+        next = document.getElementById('next');
+        icon = document.getElementsByClassName('icon');
+        main = document.getElementById('main');
+        len = li.length,
+            li_w = 0;
+        now = 0;
+        img[0].onload = function(e) {
+            li_w = this.offsetWidth;  // 获取img的宽度
+        }
+
+        var timer = setInterval(function() {  // 设置图片可以自动滚动
+            next.onclick();
+        }, 3000)
+
+
+        prev.onclick = function(e) {
+            if (now > 0) {
+                now --;
+            } else {
+                now = len/2-1;  // 调整到中间上一张的，也就是最后一张的位置
+                ul.style.left = -(li_w * (len/2)) + 'px';  //
+            }
+            scroll();
+        }
+
+        next.onclick = function(e) {
+            if (now < len - 1) {
+                now++;
+            } else {
+                now = len/2;  //调到中间下一张的位置
+               ul.style.left = -(li_w * (len/2 - 1)) + 'px';  // 从第一轮最后一张滚动到第二轮第一张，看起来就像是最后一张滚动到第一张一样
+            }
+            scroll();
+        }
+
+        function scroll() {
+            act(ul, 'left', now*(-li_w));
+            iconScroll();
+        }
+
+        function iconScroll() {
+            for(var i=0; i<icon.length; i++) {
+                icon[i].classList.remove('active');  // 去除所有icon的样式
+            }
+            icon[now%4].classList.add('active');
+        }
+
+        main.onmouseover = function(e) {  // 当鼠标hover,自动滚动停止
+            clearInterval(timer);
+        }
+        main.onmouseout = function(e) {  // 鼠标离开，自动滚动重新开始
+            timer = setInterval(function() {
+                next.onclick();
+            }, 3000)
+        }
+
+        function css(obj, attr) {
+            if (obj.currentStyle) {
+                return obj.currentStyle[attr];
+            } else {
+                return getComputedStyle(obj, false)[attr];
+            }
+        }
+
+        function act(obj, attr, target, fn) {  // 移动所需要的动画
+            obj.timer && clearInterval(obj.timer);
+            obj.timer = setInterval(function(){
+                var stop = true;
+                var cur = parseInt(css(obj, attr));  // 初始的Left是0
+                var speed = (target - cur) / 8;
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);  // 如果不加这一句，会一直在循环内，动画不会结束。。
+                if(cur != target){
+                    stop = false;
+                    obj.style[attr] = cur + speed + 'px';
+                }
+                if(stop){
+                    clearInterval(obj.timer);
+                    obj.timer = null;
+                    fn && fn();
+                }
+            }, 30);
+
+        }
+    })()
+</script>
 
 </body>
 </html>
