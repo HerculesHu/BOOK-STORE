@@ -10,8 +10,6 @@ window.onload=function () {
     setup();
     var iTimerid = window.setInterval("showtime()", 10);//设置循环周期
     var iTimerid2 = window.setInterval("weeks()", 10);
-
-
 }
 
 var a=0;
@@ -59,7 +57,6 @@ function  weeks() {
     document.getElementById("displaydate").innerHTML = "<span>" + oDt.getFullYear() + "年" + iMonth + "月" + oDt.getDate() + "日 " + sWd + "</span>";
     var iTimerid = window.setInterval("showtime()", 1000);
 }
-
 
 function showtime() {
     var oDt = new Date();
