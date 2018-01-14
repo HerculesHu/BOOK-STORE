@@ -5,9 +5,18 @@ body {
     margin: 0; padding: 0;
     background: #1d140f ;
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    /*最小高度*/
+    min-height: 100vh;
 }
 
-
+* {
+    margin: 0;
+}
+.page-wrap {
+    flex: 1;
+}
 
 
 /*网页名样式*/
@@ -167,3 +176,14 @@ ul.nav li:hover ul{
 }
 
 
+
+
+
+/****************************************************************************************************************/
+/*页脚版权*/
+.footer {
+    background: #333;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+}
