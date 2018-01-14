@@ -1,0 +1,84 @@
+
+
+
+/*头部样式*/
+.header{
+    width:980px;
+    height: 62px;
+    margin:0 auto;
+}
+.logo{
+    width: 179px;
+    height: 39px;
+    float:left;
+    margin-top:20px;
+}
+.search{
+    float:right;
+    margin-top:20px;
+    border:1px solid #ECECEC;
+}
+.txt{
+    width: 165px;
+    height: 28px;
+    float:left;
+
+}
+.search .btn{
+    width:30px;
+    height: 30px;
+    background: url("images/search2.jpg");
+    float:right;
+}
+
+
+/*导航栏*/
+ ul{
+    padding:0px;
+    margin:0px;
+    list-style-type:none;
+    width:492px;
+    background-color: #8bd400;
+    float:left;
+}
+
+ul.nav li{
+    float: left;/*当元素浮动 将不再占据文档流中的任何位置 父列表实际上没有内容 就会收缩 从而隐藏列表背景*/
+    width:80px;
+    border:1px solid #fff;
+}
+
+ul.nav a{
+    display:block;
+    padding:0 10px;/*每个按钮的宽度由锚文本的尺寸决定 所以不设置显示的宽度 而是在每个锚链接的左右设置一定的内边距*/
+    line-height: 2.2;
+    text-decoration:none;
+    color:#fff;
+}
+
+
+
+ul.nav a:hover, ul.nav a:focus{
+    color:#333;
+}
+ul.nav li ul{
+    width:80px;
+    position:absolute;
+    display: none;
+    margin-top:2px;
+}
+ul.nav li:hover ul{
+    display:block;
+}
+
+
+/*flexn布局导航栏的外壳*/
+#nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background: url("images/navbg.jpg") repeat center center;
+    width: 100%;
+}
