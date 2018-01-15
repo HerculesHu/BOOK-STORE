@@ -20,6 +20,13 @@ body {
 }
 
 
+.header{
+    justify-content: space-around;
+    max-width:2000px;
+    margin:30px auto;
+    overflow: hidden;
+}
+
 /*网页名样式*/
 a:link, a:visited {
     text-decoration: none;
@@ -38,8 +45,6 @@ h1 { font-size: 2.9em; font-weight: bold; letter-spacing: -2px; }
 h2 { font-size: 2.8em; font-weight: bold; letter-spacing: -2px;}
 h3 { font-size: 2.1em; font-weight: normal; letter-spacing: -0.5px; padding-top: 5px; }
 h4 { font-size: 1.7em; }
-
-
 
 
 
@@ -83,12 +88,11 @@ ul.nav li:hover ul{
     display:block;
 }
 
-
 /*flexn布局导航栏的外壳*/
 #nav {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 60px;
     background: url("images/navbg.jpg") repeat center center;
@@ -97,8 +101,8 @@ ul.nav li:hover ul{
 
 /*搜索框的位置*/
 #quick-search {
-    position: absolute;
-    right: 15px;
+    position: relative;
+
     padding: 0; margin: 0;
     border: none;
     background: url(images/header-search.png) no-repeat;
@@ -127,12 +131,12 @@ ul.nav li:hover ul{
     width: 25px; height: 25px;
 }
 
-
 /*时间框样式设置*/
 #time{
-    position: absolute;
-    left: 15px;
-    padding: 0; margin: 0;
+    display: flex;
+    position: relative;
+    clear: left;
+
     border: none;
 }
 #displaydate{
@@ -144,7 +148,6 @@ ul.nav li:hover ul{
     color: #8bd400;
 }
 
-
 /***************************************************************************************************/
 /*内容区域*/
 
@@ -153,6 +156,9 @@ ul.nav li:hover ul{
     margin: 0 0 100px;
     border: solid 1px #000;
     justify-content: space-around;
+    max-width:1500px;
+    margin:30px auto;
+    overflow: hidden;
 }
 .box-item{
     line-height: 200px;
@@ -198,7 +204,6 @@ ul.nav li:hover ul{
     color: rgb( 255, 255, 255 );
     line-height: 2.25;
 }
-/******************************************************************************************************************/
 
 
 /**************************************************************************************************/
@@ -299,9 +304,6 @@ li a img {
 }
 
 
-/*.banner:hover {*/
-    /*cursor: pointer;*/
-/*}*/
 
 /*鼠标经过箭头的出现动画*/
 .banner:hover a.carousel-container-right, .banner:hover a.carousel-container-left {
