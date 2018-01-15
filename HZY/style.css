@@ -371,14 +371,24 @@ div,figure,figcaption{
     clear: both;}
 
 #container{
-    max-width:1263px;
+
+    max-width:1500px;
     margin:30px auto;
-    overflow: hidden;
+    overflow: visible;
 }
 #container .sideBar{
     float: right;
     width:26.2%;
 }
+
+
+#container .sideBar:hover{
+
+    transform: translateX(42px);  /* 首先让箭头显示在图片区域以外 */
+    transition: .3s;  /* hover显示中间过度 */
+}
+
+
 #container .sideBox{
     border:1px solid #eee;
     margin:0px 0px 10px 0px;

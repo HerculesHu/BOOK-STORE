@@ -280,7 +280,7 @@
                 </figure>
             </section>
             <div class="clearFix"></div>
-            <div class="more">加载更多</div>
+            <div class="more" id="more">加载更多</div>
         </div>
     </div>
 <!--页脚-->
@@ -305,6 +305,7 @@
             len = li.length,
             li_w = 0;
             now = 0;
+            butmore=document.getElementById('more');
         img[0].onload = function(e) {
             li_w = this.offsetWidth;  // 获取img的宽度
         }
@@ -312,6 +313,10 @@
         var timer = setInterval(function() {  // 设置图片可以自动滚动
             next.onclick();
         }, 3000)
+
+        butmore.onclick=function () {
+            window.alert("暂时不能加载");
+        }
 
         prev.onclick = function(e) {
             if (now > 0) {
