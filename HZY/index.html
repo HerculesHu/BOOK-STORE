@@ -35,8 +35,6 @@
 
 
 
-
-
             <ul class="nav">
                 <li class="first"><a href="#">首页</a>
                     <ul class="nav">
@@ -299,14 +297,14 @@
 
         var li = document.getElementsByClassName('li-left'),
             ul = document.getElementById('cast');
-        img = document.getElementsByTagName('img'),
+            img = document.getElementsByTagName('img'),
             prev = document.getElementById('prev')
-        next = document.getElementById('next');
-        icon = document.getElementsByClassName('icon');
-        main = document.getElementById('main');
-        len = li.length,
+            next = document.getElementById('next');
+            icon = document.getElementsByClassName('icon');
+            main = document.getElementById('main');
+            len = li.length,
             li_w = 0;
-        now = 0;
+            now = 0;
         img[0].onload = function(e) {
             li_w = this.offsetWidth;  // 获取img的宽度
         }
@@ -314,7 +312,6 @@
         var timer = setInterval(function() {  // 设置图片可以自动滚动
             next.onclick();
         }, 3000)
-
 
         prev.onclick = function(e) {
             if (now > 0) {
@@ -371,7 +368,7 @@
                 var stop = true;
                 var cur = parseInt(css(obj, attr));  // 初始的Left是0
                 var speed = (target - cur) / 8;
-                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);  // 如果不加这一句，会一直在循环内，动画不会结束。。
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);  // 如果不加这一句，会一直在循环内，动画不会结束。
                 if(cur != target){
                     stop = false;
                     obj.style[attr] = cur + speed + 'px';
